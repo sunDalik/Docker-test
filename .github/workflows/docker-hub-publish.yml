@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - with: 
-        username: ${{ secrets.DOCKER_USERNAME }}
-        passwd: ${{ secrets.DOCKER_PASSWORD }}
     - name: Log in to Docker Hub
       run: echo ${{ passwd }} | docker login -u ${{ username }} --password-stdin
 
